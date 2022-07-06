@@ -1,4 +1,4 @@
-package com.nttdata.productservices.model.document;
+package com.nttdata.productservices.infrastructure.document;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

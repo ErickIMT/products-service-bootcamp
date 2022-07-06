@@ -1,6 +1,6 @@
-package com.nttdata.productservices.model.repository;
+package com.nttdata.productservices.infrastructure.repository;
 
-import com.nttdata.productservices.model.document.TypeBankAccount;
+import com.nttdata.productservices.infrastructure.document.TypeBankAccount;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

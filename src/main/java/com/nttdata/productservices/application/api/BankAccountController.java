@@ -1,18 +1,15 @@
-package com.nttdata.productservices.api;
+package com.nttdata.productservices.application.api;
 
-import com.nttdata.productservices.api.customer.CustomerClient;
-import com.nttdata.productservices.api.customer.CustomerClientService;
-import com.nttdata.productservices.model.document.BankAccount;
-import com.nttdata.productservices.model.dto.CustomerDTO;
-import com.nttdata.productservices.model.dto.TransactionDTO;
-import com.nttdata.productservices.model.service.BankAccountService;
+import com.nttdata.productservices.infrastructure.document.BankAccount;
+import com.nttdata.productservices.domain.dto.TransactionDTO;
+import com.nttdata.productservices.infrastructure.service.BankAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Clase Controladoa de las cuentas y creditos bancarios.
+ * Clase Controladoa de las cuentas bancarias.
  */
 @RestController
 @RequestMapping("/bankAccounts")
@@ -41,4 +38,8 @@ public class BankAccountController {
     return bankAccountService.updateAmount(transactionDto);
   }
 
+  @GetMapping("/user/{id}")
+  private Flux<BankAccount> getbyCustomerId(@PathVariable("id") String id) {
+    return bankAccountService.getBankAccountByCustomerId(id);
+  }
 }

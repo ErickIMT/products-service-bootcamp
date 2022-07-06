@@ -1,4 +1,4 @@
-package com.nttdata.productservices.model.document;
+package com.nttdata.productservices.infrastructure.document;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,12 +9,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@Document("type_bank_accounts")
-public class TypeBankAccount {
+@NoArgsConstructor
+@Document("credits")
+public class Credit {
 
     @Id
     private String id;
-    private String name;
+    private String creditAccount;
+    private String customerId;
+    private TypeCredit typeCredit;
+    private float amount;
+    private float limit;
 }

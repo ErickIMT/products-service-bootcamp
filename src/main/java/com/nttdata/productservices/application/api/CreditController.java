@@ -1,14 +1,17 @@
-package com.nttdata.productservices.api;
+package com.nttdata.productservices.application.api;
 
-import com.nttdata.productservices.model.document.BankAccount;
-import com.nttdata.productservices.model.document.Credit;
-import com.nttdata.productservices.model.dto.TransactionDTO;
-import com.nttdata.productservices.model.service.CreditService;
+import com.nttdata.productservices.infrastructure.document.BankAccount;
+import com.nttdata.productservices.infrastructure.document.Credit;
+import com.nttdata.productservices.domain.dto.TransactionDTO;
+import com.nttdata.productservices.infrastructure.service.CreditService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Clase Controladora de Creditos Bancarios.
+ */
 @RestController
 @RequestMapping("/credits")
 public class CreditController {
@@ -35,4 +38,8 @@ public class CreditController {
         return creditService.updateAmount(transactionDTO);
     }
 
+    @GetMapping("/user/{id}")
+    private Flux<Credit> getbyCustomerId(@PathVariable("id") String id) {
+        return creditService.getCreditByCustomerId(id);
+    }
 }

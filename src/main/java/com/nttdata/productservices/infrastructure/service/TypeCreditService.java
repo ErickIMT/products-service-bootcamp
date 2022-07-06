@@ -1,6 +1,6 @@
-package com.nttdata.productservices.model.service;
+package com.nttdata.productservices.infrastructure.service;
 
-import com.nttdata.productservices.model.document.TypeCredit;
+import com.nttdata.productservices.infrastructure.document.TypeCredit;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

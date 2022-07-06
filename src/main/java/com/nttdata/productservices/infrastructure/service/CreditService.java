@@ -1,7 +1,7 @@
-package com.nttdata.productservices.model.service;
+package com.nttdata.productservices.infrastructure.service;
 
-import com.nttdata.productservices.model.document.Credit;
-import com.nttdata.productservices.model.dto.TransactionDTO;
+import com.nttdata.productservices.infrastructure.document.Credit;
+import com.nttdata.productservices.domain.dto.TransactionDTO;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -12,4 +12,6 @@ public interface CreditService {
     Mono<Credit> updateAmount(TransactionDTO transactionDTO);
     void delete(String id);
     Mono<Credit> getCredit(String id);
+
+    Flux<Credit> getCreditByCustomerId(String id);
 }

@@ -1,4 +1,4 @@
-package com.nttdata.productservices.model.dto;
+package com.nttdata.productservices.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

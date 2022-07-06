@@ -1,6 +1,5 @@
-package com.nttdata.productservices.model.document;
+package com.nttdata.productservices.infrastructure.document;
 
-import com.nttdata.productservices.model.dto.CustomerDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
