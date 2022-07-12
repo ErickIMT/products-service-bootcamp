@@ -1,4 +1,4 @@
-package com.nttdata.productservices.application.feign;
+package com.nttdata.productservices.application.config;
 
 import feign.codec.Decoder;
 import feign.codec.Encoder;

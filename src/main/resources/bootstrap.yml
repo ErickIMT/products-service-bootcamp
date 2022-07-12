@@ -3,7 +3,7 @@ spring:
     name: product-service
   cloud:
     config:
-      uri: http://bootcamp-project.azurewebsites.net/
+      uri: http://localhost:8090/
 management:
   security:
     enabled: false
